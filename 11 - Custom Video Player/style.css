@@ -32,6 +32,14 @@ body {
   max-width: none;
   width: 100%;
 }
+.btn {
+  background: #c1666b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 
 .player:-webkit-full-screen {
   max-width: none;
