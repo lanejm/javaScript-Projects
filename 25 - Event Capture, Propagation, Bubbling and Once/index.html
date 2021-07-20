@@ -42,7 +42,18 @@
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div')
 
+  function logText(e) {
+    console.log(this.classList.value)
+    e.stopPropagation() //stops event from bubbling up
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false, //capture: true causes it to go from top down
+    once: true //listen for a click once and then unbind itself
+    //could use this for store checkout pages to only click button once.
+  }));
 </script>
 </body>
 </html>
